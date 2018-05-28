@@ -224,7 +224,7 @@ seed
         },
         {
             category: "Highlighter",
-            name: "OFRA x NikkieTutorials “Glazed Donut” Highlighter ",
+            name: "OFRA x NikkieTutorials “Glazed Donut” Highlighter",
             price: 35.00,
             img: `${IMG_URL}RoghUfO.png`,
             link: 'https://www.ofracosmetics.com/products/glazed-donut-highlighter'
@@ -494,7 +494,193 @@ seed
                     // 12. Eyeshadow //
                     products.find(p => p.name === "Stila Glitter & Glow Liquid Eyeshadow") 
                 ]
+            }, 
+            {
+                name: 'nikkietutorials', 
+                youtube_id: 'UCzTKskwIc_-a0cGvCXA848Q', 
+                video_url: `${YT_URL}aCoDqL1dK9c`, 
+                favorites:[
+                    // 1. Foundation // 
+                    products.find(p => p.name === "Huda Beauty Faux Filter Foundation"), 
+                    // 2. Concealer //
+                    products.find(p => p.name === "NARS Soft Matte Complete Concealer"), 
+                    // 3. Setting Spray //
+                    products.find(p => p.name === "Gerard Cosmetics Slay All Day Setting Spray"), 
+                    // 4. Powder //
+                    products.find(p => p.name === "Maybelline Fit Me Loose Powder"), 
+                    // 5. Contour //
+                    products.find(p => p.name === "Rodial Instaglam Deluxe Bronzing Powder"), 
+                    // 6. Highlighter //
+                    products.find(p => p.name === "OFRA x NikkieTutorials “Glazed Donut” Highlighter"), 
+                    // 7. Blush //
+                    products.find(p => p.name === "MAC Extra Dimension Blush"), 
+                    // 8. Mascara //
+                    products.find(p => p.name === "Benefit Cosmetics BADgal Bang! Mascara"), 
+                    // 9. Eyeliner //
+                    products.find(p => p.name === "Jouer Cosmetics Slim Crème Eyeliner"), 
+                    // 10. Lipstick //
+                    products.find(p => p.name === "Jouer Long-Wear Creme Lip Liner"), 
+                    // 11. Brow //
+                    products.find(p => p.name === "Iconic London Sculpt & Boost Eyebrow Cushion"), 
+                    // 12. Eyeshadow //
+                    products.find(p => p.name === "Juvia’s Place Douce Eyeshadow Palette") 
+                ]
+            }, 
+            {
+                name: 'jeffreestar', 
+                youtube_id: 'UCkvK_5omS-42Ovgah8KRKtg', 
+                video_url: `${YT_URL}ebOqNwr9sl0`, 
+                favorites:[
+                    // 1. Foundation // 
+                    products.find(p => p.name === "La Mer The Soft Fluid Long Wear Foundation"), 
+                    // 2. Concealer //
+                    products.find(p => p.name === "Makeup Revolution Conceal & Define Concealer"), 
+                    // 3. Setting Spray //
+                    products.find(p => p.name === "Morphe Prep & Set Makeup Setting Spray"), 
+                    // 4. Powder //
+                    products.find(p => p.name === "La Mer The Powder"), 
+                    // 5. Contour //
+                    products.find(p => p.name === "La Mer The Bronzing Powder"), 
+                    // 6. Highlighter //
+                    products.find(p => p.name === "Jeffree Star Cosmetics 24 Karat Pro Palette"), 
+                    // 7. Blush //
+                    products.find(p => p.name === "Gucci Sheer Blushing Powder"), 
+                    // 8. Mascara //
+                    products.find(p => p.name === "Benefit Cosmetics Rollerlash Curling Mascara"), 
+                    // 9. Eyeliner //
+                    products.find(p => p.name === "Tom Ford Eye Defining Pen"), 
+                    // 10. Lipstick //
+                    products.find(p => p.name === "Jeffree Star Cosmetics Velour Liquid Lipstick"), 
+                    // 11. Brow //
+                    products.find(p => p.name === "Anastasia Beverly Hills Dipbrow Pomade"), 
+                    // 12. Eyeshadow //
+                    products.find(p => p.name === "Jeffree Star Cosmetics Blood Sugar Palette") 
+                ]
+            }, 
+            {
+                name: 'Wayne Goss', 
+                youtube_id: 'UCCvoAe__WFYMNAEN-C-CtYA', 
+                video_url: `${YT_URL}Tj8W3c4qN_M`, 
+                favorites:[
+                    // 1. Foundation // 
+                    products.find(p => p.name === "Nars Radient Long Wear Foundation"), 
+                    // 2. Concealer //
+                    products.find(p => p.name === "Eve Pearl Dual Salmon Concealer"), 
+                    // 3. Setting Spray //
+                    products.find(p => p.name === "Skindanavia The Makeup Finishing Spray"), 
+                    // 4. Powder //
+                    products.find(p => p.name === "Yves Saint Laurent Souffle D'Eclat"), 
+                    // 5. Contour //
+                    products.find(p => p.name === "Rodial Instaglam Deluxe Bronzing Powder"), 
+                    // 6. Highlighter //
+                    products.find(p => p.name === "Becca Shimmering Skin Perfector"), 
+                    // 7. Blush //
+                    products.find(p => p.name === "Natasha Denona Blush & Diamond Palette"), 
+                    // 8. Mascara //
+                    products.find(p => p.name === "By Terry Lash-Expert Twist Brush Double-Effect Mascara"), 
+                    // 9. Eyeliner //
+                    products.find(p => p.name === "Illamasqua Precision Gel Liner"), 
+                    // 10. Lipstick //
+                    products.find(p => p.name === "NARS Powermatte Lip Pigment"), 
+                    // 11. Brow //
+                    products.find(p => p.name === "Anastasia Beverly Hills Dipbrow Pomade"), 
+                    // 12. Eyeshadow //
+                    products.find(p => p.name === "Charlotte Tilbury Transform Eyes") 
+                ]
+            }, 
+            {
+                name: 'Jaclyn Hill', 
+                youtube_id: 'UC6jgzx2g3nlbaYkd8EMweKA', 
+                video_url: `${YT_URL}mTHLyCqtLJE`, 
+                favorites:[
+                    // 1. Foundation // 
+                    products.find(p => p.name === "Dior Diorskin Forever Foundation"), 
+                    // 2. Concealer //
+                    products.find(p => p.name === "Tarte Shape Tape Contour Concealer"), 
+                    // 3. Setting Spray //
+                    products.find(p => p.name === "Morphe Prep & Set Makeup Setting Spray"), 
+                    // 4. Powder //
+                    products.find(p => p.name === "Hourglass Veil Translucent Setting Powder"), 
+                    // 5. Contour //
+                    products.find(p => p.name === "La Mer The Bronzing Powder"), 
+                    // 6. Highlighter //
+                    products.find(p => p.name === "Becca Shimmering Skin Perfector"), 
+                    // 7. Blush //
+                    products.find(p => p.name === "Morphe 8W Warm Master Blush Palette"), 
+                    // 8. Mascara //
+                    products.find(p => p.name === "L'Oreal Voluminous Lash Paradise Mascara"), 
+                    // 9. Eyeliner //
+                    products.find(p => p.name === "Morphe Gel Eyeliner"), 
+                    // 10. Lipstick //
+                    products.find(p => p.name === "Smashbox Always On Liquid Lipstick"), 
+                    // 11. Brow //
+                    products.find(p => p.name === "Anastasia Beverly Hills Brow Definer"), 
+                    // 12. Eyeshadow //
+                    products.find(p => p.name === "Morphe The Jaclyn Hill Palette") 
+                ]
+            }, 
+            {
+                name: 'Desi Perkins', 
+                youtube_id: 'UCG9nVSLp4nQlW79sY5ihRrg', 
+                video_url: `${YT_URL}j1f04Jg7IaA`, 
+                favorites:[
+                    // 1. Foundation // 
+                    products.find(p => p.name === "Nars Radient Long Wear Foundation"), 
+                    // 2. Concealer //
+                    products.find(p => p.name === "Becca Aqua Luminous Perfecting Concealer"), 
+                    // 3. Setting Spray //
+                    products.find(p => p.name === "MAC Prep + Prime Fix+"), 
+                    // 4. Powder //
+                    products.find(p => p.name === "Charlotte Tilbury Air Brush Flawless Finish Skin Perfecting Micro-Powder"), 
+                    // 5. Contour //
+                    products.find(p => p.name === "Marc Jacobs O!Mega Bronzer"), 
+                    // 6. Highlighter //
+                    products.find(p => p.name === "DOSE of Colors DESI X KATY MÍRAME Highlighter"), 
+                    // 7. Blush //
+                    products.find(p => p.name === "MAC Extra Dimension Blush"), 
+                    // 8. Mascara //
+                    products.find(p => p.name === "MAC Extended Play Mascara"), 
+                    // 9. Eyeliner //
+                    products.find(p => p.name === "DOSE of Colors Cream Matte Eyeliner"), 
+                    // 10. Lipstick //
+                    products.find(p => p.name === "DOSE of Colors DESI X KATY Lipstick"), 
+                    // 11. Brow //
+                    products.find(p => p.name === "Benefit Ka-BROW! Eyebrow Cream-Gel Color"), 
+                    // 12. Eyeshadow //
+                    products.find(p => p.name === "Kat Von D MetalMatte Mini Eyeshadow Palette") 
+                ]
             }
+            // {
+            //     name: 'nikkietutorials', 
+            //     youtube_id: '', 
+            //     video_url: `${YT_URL}`, 
+            //     favorites:[
+            //         // 1. Foundation // 
+            //         products.find(p => p.name === ""), 
+            //         // 2. Concealer //
+            //         products.find(p => p.name === ""), 
+            //         // 3. Setting Spray //
+            //         products.find(p => p.name === ""), 
+            //         // 4. Powder //
+            //         products.find(p => p.name === ""), 
+            //         // 5. Contour //
+            //         products.find(p => p.name === ""), 
+            //         // 6. Highlighter //
+            //         products.find(p => p.name === ""), 
+            //         // 7. Blush //
+            //         products.find(p => p.name === ""), 
+            //         // 8. Mascara //
+            //         products.find(p => p.name === ""), 
+            //         // 9. Eyeliner //
+            //         products.find(p => p.name === ""), 
+            //         // 10. Lipstick //
+            //         products.find(p => p.name === ""), 
+            //         // 11. Brow //
+            //         products.find(p => p.name === ""), 
+            //         // 12. Eyeshadow //
+            //         products.find(p => p.name === "") 
+            //     ]
+            // }, 
         ])
     })
 
