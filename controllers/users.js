@@ -8,7 +8,6 @@ function signup(req, res) {
     .then(user => {
       res.json({token: createJWT(user)});
     })
-    // User data invalid (prob duplicate email)
     .catch(err => res.status(400).json(err));
 }
 
@@ -30,7 +29,7 @@ function login(req, res) {
 
 function createJWT(user) {
   return jwt.sign(
-    {user}, // data payload
+    {user},
     SECRET,
     {expiresIn: '24h'}
   );

@@ -11,6 +11,7 @@ import InfluencerPage from '../InfluencerPage/InfluencerPage';
 import LoginPage from '../LoginPage/LoginPage';
 import SignupPage from '../SignupPage/SignupPage';
 import userService from '../../utils/userService';
+import NavBar from '../../components/NavBar/NavBar';
 
 class App extends Component {
     constructor(props) {
@@ -36,6 +37,7 @@ class App extends Component {
     render() {
         return (
             <div>
+                <NavBar />
                 <Router>
                     <Switch>
                         <Route exact path='/' render={() =>

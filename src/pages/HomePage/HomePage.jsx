@@ -30,7 +30,7 @@ class HomePage extends Component {
         if (this.state.influencers) {
             influencers = this.state.influencers.map(influencer => 
                 <InfluencerCard 
-                    name={influencer.name}
+                    influencer={influencer}
                 />
             )
         }

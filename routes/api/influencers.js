@@ -4,6 +4,8 @@ var influencersCtrl = require('../../controllers/influencers');
 
 /*---------- Public Routes ----------*/
 router.get('/', influencersCtrl.getAllInfluencers);
+router.get('/:youtubeId/img', influencersCtrl.getImgUrl);
+
 
 
 
