@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import InfluencerCard from '../../components/InfluencerCard/InfluencerCard';
 import './HomePage.css';
 
 class HomePage extends Component {
@@ -10,7 +11,11 @@ class HomePage extends Component {
     }
 
     getAllInfluencers = (props) => {
-        fetch('/api/influencers');
+        fetch('/api/influencers')
+        .then(res => res.json())
+        .then(influencers => {
+            this.setState({influencers})
+        })
     }
 
     /*--- Lifecycle Methods ---*/
@@ -20,9 +25,19 @@ class HomePage extends Component {
     }
 
     render() {
+        let influencers = null;
+
+        if (this.state.influencers) {
+            influencers = this.state.influencers.map(influencer => 
+                <InfluencerCard 
+                    name={influencer.name}
+                />
+            )
+        }
+
         return (
             <div>
-                this is the HomePage.
+                {influencers}
             </div>
         )
     }
