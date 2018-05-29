@@ -5,7 +5,7 @@ class InfluencerCard extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            image_url: 'https://i.imgur.com/PRnHIJw.png'
+            image_url: 'https://i.imgur.com/jjD5tA4.png'
         }
     }
 
@@ -25,7 +25,9 @@ class InfluencerCard extends Component {
     render() {
         return (
             <div>
-                <img src={this.state.image_url}/>
+                <a href='/influencer/:id'>
+                    <img src={this.state.image_url}/>
+                </a>
             </div>
         )
     }

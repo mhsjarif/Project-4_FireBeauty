@@ -1,0 +1,12 @@
+.nav-bar {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    background-color: lightcoral;
+    font-weight: 200;
+    font-size: 48px;
+}
+
+.banner-image img {
+    width: 100%;
+}

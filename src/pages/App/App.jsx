@@ -37,8 +37,9 @@ class App extends Component {
     render() {
         return (
             <div>
-                <NavBar />
                 <Router>
+                    <div>
+                    <NavBar user={this.state.user} handleLogout={this.handleLogout}/>
                     <Switch>
                         <Route exact path='/' render={() =>
                             <HomePage />
@@ -62,6 +63,7 @@ class App extends Component {
                             />
                         }/>
                     </Switch>
+                    </div>
                 </Router>
             </div>
         )

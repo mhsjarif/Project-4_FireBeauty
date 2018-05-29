@@ -1,15 +1,26 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import './NavBar.css';
 
-const NavBar = () => (
-    <div>
-        <img src='https://i.imgur.com/aE3LXuv.png?1'/>
-        <div>
-            <a href='/'>Fire Beauty</a>
-            <a href='/followed'>Followed</a>
-            <a href='/login'>Log In</a>
-            <a href='/signup'>Sign Up</a>
+const NavBar = (props) => (
+    <div className="nav-bar-container">
+        <div className="banner-image">
+            <img src='https://i.imgur.com/aE3LXuv.png?1'/>
         </div>
+        {props.user ? 
+            <div className="nav-bar">
+                <Link to='/'>Fire Beauty</Link>-|-
+                <Link to='/followed'>Followed</Link>-|-
+                <div onClick={props.handleLogout}>Log Out</div>
+            </div>
+            : 
+            <div className="nav-bar">
+                <Link to='/'>Fire Beauty</Link>-|-
+                <Link to='/followed'>Followed</Link>-|-
+                <Link to='/login'>Log In</Link>-|-
+                <Link to='/signup'>Sign Up</Link>
+            </div>
+        }
     </div>
 )
 
