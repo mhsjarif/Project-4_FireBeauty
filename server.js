@@ -23,6 +23,7 @@ app.use(require('./config/auth'));
 
 // Put API routes here, before the "catch all" route
 app.use('/api/users', require('./routes/api/users'));
+app.use('/api/influencers', require('./routes/api/influencers'));
 
 // The following "catch all" route is necessary for
 // a SPA'sclient-side routing to properly work

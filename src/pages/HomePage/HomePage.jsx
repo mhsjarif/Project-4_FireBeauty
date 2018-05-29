@@ -9,6 +9,16 @@ class HomePage extends Component {
         }
     }
 
+    getAllInfluencers = (props) => {
+        fetch('/api/influencers');
+    }
+
+    /*--- Lifecycle Methods ---*/
+
+    componentDidMount() {
+        this.getAllInfluencers();
+    }
+
     render() {
         return (
             <div>
