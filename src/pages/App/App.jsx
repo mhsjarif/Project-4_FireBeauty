@@ -2,8 +2,7 @@ import React, {Component} from 'react';
 import {
     BrowserRouter as Router,
     Switch,
-    Route,
-    Redirect
+    Route
 } from 'react-router-dom';
 import './App.css';
 import FollowedPage from '../FollowedPage/FollowedPage';
@@ -11,6 +10,7 @@ import HomePage from '../HomePage/HomePage';
 import InfluencerPage from '../InfluencerPage/InfluencerPage';
 import LoginPage from '../LoginPage/LoginPage';
 import SignupPage from '../SignupPage/SignupPage';
+import userService from '../../utils/userService';
 
 class App extends Component {
     constructor(props) {
@@ -19,6 +19,19 @@ class App extends Component {
 
         }
     }
+
+    handleLogout = () => {
+        userService.logout();
+        this.setState({user: null});
+      }
+    
+      handleSignup = () => {
+        this.setState({user: userService.getUser()});
+      }
+    
+      handleLogin = () => {
+        this.setState({user: userService.getUser()});
+      }
 
     render() {
         return (
@@ -34,11 +47,17 @@ class App extends Component {
                         <Route exact path='/followed' render={() =>
                             <FollowedPage />
                         }/>
-                        <Route exact path='/login' render={() =>
-                            <HomePage />
+                        <Route exact path='/login' render={(props) =>
+                            <LoginPage 
+                                {...props}
+                                handleLogin={this.handleLogin}
+                            />
                         }/>
-                        <Route exact path='/signup' render={() =>
-                            <HomePage />
+                        <Route exact path='/signup' render={(props) =>
+                            <SignupPage 
+                                {...props}
+                                handleSignup={this.handleSignup}
+                            />
                         }/>
                     </Switch>
                 </Router>
