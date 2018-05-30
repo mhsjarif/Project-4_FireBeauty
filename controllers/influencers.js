@@ -4,9 +4,14 @@ var ROOT_URL = 'https://www.googleapis.com/youtube/v3/';
 var YT_PART = 'snippet,contentDetails,statistics,status';
 
 function getAllInfluencers(req, res) {
-    console.log('all influencers function hit');
     Influencer.find({})
     .then(influencers => res.json(influencers))
+}
+
+function getInfluencer(req, res) {
+    console.log(req.params.id)
+    Influencer.find({_id:req.params.id})
+    .then(influencer => res.json(influencer))
 }
 
 function getImgUrl(req, res) {
@@ -21,5 +26,6 @@ function getImgUrl(req, res) {
 
 module.exports = {
     getAllInfluencers,
+    getInfluencer,
     getImgUrl
   };

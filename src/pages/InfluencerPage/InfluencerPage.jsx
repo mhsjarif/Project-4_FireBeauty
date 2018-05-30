@@ -12,6 +12,7 @@ class InfluencerPage extends Component {
     render() {
         return (
             <div>
+                {}
                 this is the InfluencerPage.
             </div>
         )
