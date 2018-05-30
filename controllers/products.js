@@ -1,10 +1,11 @@
 var Product = require('../models/product');
 
 
-function getFavorites() {
-
+function getProduct(req, res) {
+    Product.find({_id: req.params.id})
+    .then(product => res.json(product))
 }
 
 module.exports = {
-    getFavorites
+    getProduct
 }
