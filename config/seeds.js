@@ -685,7 +685,6 @@ seed
     })
 
     .then(influencer => {
-        console.log(influencer);
         process.exit();
         require('mongoose').connection.close();
 

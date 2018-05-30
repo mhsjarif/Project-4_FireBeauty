@@ -17,8 +17,12 @@ function getYouTubeChannel(req, res) {
    request(`${ROOT_URL}channels?id=${req.params.youtubeId}&key=${process.env.YT_API_KEY}&part=${YT_PART}`, 
         function(err, response, body) {
             var data = JSON.parse(body);
-            console.log(data.items);
-            res.json({thumbnailUrl: data.items[0].snippet.thumbnails.medium.url})
+            // console.log(data.items);
+            res.json(
+                {channelName: data.items[0].snippet.title, 
+                 thumbnailUrl: data.items[0].snippet.thumbnails.medium.url
+                }
+            )
         }
     );
 };

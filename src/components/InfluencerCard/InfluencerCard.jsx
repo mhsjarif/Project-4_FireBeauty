@@ -14,7 +14,7 @@ class InfluencerCard extends Component {
         fetch(`/api/influencers/${this.props.influencer.youtube_id}/channel`)
         .then(res => res.json())
         .then(data => {
-            this.setState({imageUrl: data.thumbnailUrl})
+            this.setState({channelName: data.channelName, imageUrl: data.thumbnailUrl})
         })
     }
 
@@ -27,6 +27,7 @@ class InfluencerCard extends Component {
         return (
             <div>
                 <Link to={`/influencer/${this.props.influencer._id}`}>
+                    <h4>{this.state.channelName}</h4>
                     <img src={this.state.imageUrl}/>
                 </Link>
             </div>
