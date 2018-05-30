@@ -8,17 +8,11 @@
     justify-content: center;
     background-color: lightcoral;
     font-weight: 200;
-    font-size: 48px;
+    font-size: 200%;
 }
 
 .banner-image img {
     width: 100%;
-}
-
-.banner-logo {
-    position: absolute;
-    left: 25%;
-    top: 5%;
 }
 
 .logo {

@@ -39,16 +39,25 @@ class App extends Component {
             <div>
                 <Router>
                     <div>
-                    <NavBar user={this.state.user} handleLogout={this.handleLogout}/>
+                    <NavBar
+                        user={this.state.user}
+                        handleLogout={this.handleLogout}
+                    />
                     <Switch>
-                        <Route exact path='/' render={() =>
-                            <HomePage />
+                        <Route exact path='/' render={(props) =>
+                            <HomePage
+                                {...props}
+                            />
                         }/>
-                        <Route exact path='/influencer/:id' render={() =>
-                            <InfluencerPage />
+                        <Route exact path='/influencer/:id' render={(props) =>
+                            <InfluencerPage
+                                {...props}
+                            />
                         }/>
-                        <Route exact path='/followed' render={() =>
-                            <FollowedPage />
+                        <Route exact path='/followed' render={(props) =>
+                            <FollowedPage
+                                {...props}
+                            />
                         }/>
                         <Route exact path='/login' render={(props) =>
                             <LoginPage 

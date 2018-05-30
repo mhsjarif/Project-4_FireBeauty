@@ -1,19 +1,20 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom'
 import './InfluencerCard.css';
 
 class InfluencerCard extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            image_url: 'https://i.imgur.com/jjD5tA4.png'
+            imageUrl: 'https://i.imgur.com/jjD5tA4.png'
         }
     }
 
     getThumbnailUrl = () => {
-        fetch(`/api/influencers/${this.props.influencer.youtube_id}/img`)
+        fetch(`/api/influencers/${this.props.influencer.youtube_id}/channel`)
         .then(res => res.json())
         .then(data => {
-            this.setState({image_url: data.url})
+            this.setState({imageUrl: data.thumbnailUrl})
         })
     }
 
@@ -25,9 +26,9 @@ class InfluencerCard extends Component {
     render() {
         return (
             <div>
-                <a href='/influencer/:id'>
-                    <img src={this.state.image_url}/>
-                </a>
+                <Link to={`/influencer/${this.props.influencer._id}`}>
+                    <img src={this.state.imageUrl}/>
+                </Link>
             </div>
         )
     }

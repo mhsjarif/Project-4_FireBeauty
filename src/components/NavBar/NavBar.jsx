@@ -4,11 +4,8 @@ import './NavBar.css';
 
 const NavBar = (props) => (
     <div className="nav-bar-container">
-        <div className="banner-logo">
-            <img src="https://i.imgur.com/JqNo9lO.png?1"/>
-        </div>
         <div className="banner-image">
-            <img src='https://i.imgur.com/aE3LXuv.png?1'/>
+            <img src='https://i.imgur.com/F4SXnYh.png'/>
         </div>
         {props.user ? 
             <div className="nav-bar">

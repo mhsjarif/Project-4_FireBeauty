@@ -9,17 +9,16 @@ function getAllInfluencers(req, res) {
 }
 
 function getInfluencer(req, res) {
-    console.log(req.params.id)
-    Influencer.find({_id:req.params.id})
+    Influencer.find({_id: req.params.id})
     .then(influencer => res.json(influencer))
 }
 
-function getImgUrl(req, res) {
+function getYouTubeChannel(req, res) {
    request(`${ROOT_URL}channels?id=${req.params.youtubeId}&key=${process.env.YT_API_KEY}&part=${YT_PART}`, 
         function(err, response, body) {
             var data = JSON.parse(body);
             console.log(data.items);
-            res.json({url: data.items[0].snippet.thumbnails.medium.url})
+            res.json({thumbnailUrl: data.items[0].snippet.thumbnails.medium.url})
         }
     );
 };
@@ -27,5 +26,5 @@ function getImgUrl(req, res) {
 module.exports = {
     getAllInfluencers,
     getInfluencer,
-    getImgUrl
+    getYouTubeChannel
   };
