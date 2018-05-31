@@ -36,7 +36,7 @@ class HomePage extends Component {
         }
 
         return (
-            <div>
+            <div className="card-wrapper">
                 {influencers}
             </div>
         )
