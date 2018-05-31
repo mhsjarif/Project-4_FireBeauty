@@ -1,7 +1,8 @@
 require('dotenv').config({path: './../.env'});
+console.log(process.env)
 require('./database');
 const YT_URL = 'https://www.youtube.com/watch?v=';
-const IMG_URL = 'https://i.imgur.com/'
+const IMG_URL = 'https://i.imgur.com/';
 
 const Influencer = require('./../models/influencer');
 const Product = require('./../models/product');
@@ -24,7 +25,7 @@ seed
             name: "Hourglass Vanish Stick Foundation",
             price: 46.00,
             img: `${IMG_URL}30RyIrH.png`,
-            link: 'https://www.hourglasscosmetics.com/vanish-seamless-finish-foundation-stick.html'
+            link: 'https://www.hourglasscosmetics.com/vanish-seamless-finish-foundation-stick'
         },
         {
             category: "Foundation",
@@ -205,7 +206,7 @@ seed
             category: "Highlighter",
             name: "DOSE of Colors DESI X KATY MÍRAME Highlighter",
             price: 28.00,
-            img: `${IMG_URL}hgVuLJJG.png`,
+            img: `${IMG_URL}gVuLJJG.png`,
             link: 'https://doseofcolors.com/collections/desi-x-katy/products/mirame'
         },
         {

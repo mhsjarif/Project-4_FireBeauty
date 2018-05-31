@@ -3,6 +3,7 @@ import './InfluencerPage.css';
 import InfluencerBanner from '../../components/InfluencerBanner/InfluencerBanner';
 import InfluencerBio from '../../components/InfluencerBio/InfluencerBio';
 import Favorites from '../../components/Favorites/Favorites';
+import FavoriteButton from '../../components/FavoriteButton/FavoriteButton';
 
 class InfluencerPage extends Component {
     constructor(props) {
@@ -13,15 +14,15 @@ class InfluencerPage extends Component {
     }
 
     getInfluencer = (props) => {
-        fetch(`/api/influencers/${this.props.match.params.id}`)
+        return fetch(`/api/influencers/${this.props.match.params.id}`)
         .then(res => res.json())
         .then(influencer => {
-            this.setState({influencer})
-        })
+            this.setState({influencer: influencer[0]})
+        });
     }
 
     getYouTubeInfo = (influencer) => {
-        fetch(`/api/influencers/${influencer.youtube_id}/channel`)
+        return fetch(`/api/influencers/${influencer.youtube_id}/channel`)
         .then(res => res.json())
         .then(data => {
             this.setState({
@@ -39,6 +40,9 @@ class InfluencerPage extends Component {
 
     componentDidMount(props) {
         this.getInfluencer(props)
+        .then(() => {
+            this.getYouTubeInfo(this.state.influencer);
+        });
     }
 
     render() {
@@ -49,11 +53,12 @@ class InfluencerPage extends Component {
                 <div>
                     <InfluencerBanner />
                     <InfluencerBio 
-                        influencer={this.state.influencer[0]}
+                        influencer={this.state.influencer}
                     />
-
+                    <FavoriteButton 
+                        influencer={this.state.influencer}/>
                     <Favorites
-                        influencer={this.state.influencer[0]}
+                        influencer={this.state.influencer}
                     />
                 </div>
             )
