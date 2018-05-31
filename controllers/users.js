@@ -25,6 +25,10 @@ function login(req, res) {
   }).catch(err => res.status(401).json(err));
 }
 
+function followInfluencer(req, res) {
+  console.log('followInfluencer function hit!')
+}
+
 /*----- Helper Functions -----*/
 
 function createJWT(user) {
@@ -37,5 +41,6 @@ function createJWT(user) {
 
 module.exports = {
   signup,
-  login
+  login,
+  followInfluencer
 };

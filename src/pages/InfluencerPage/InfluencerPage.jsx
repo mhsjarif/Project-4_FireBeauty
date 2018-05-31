@@ -35,6 +35,11 @@ class InfluencerPage extends Component {
         })
     }
 
+    handleFollow = (props) => {
+        console.log('client side follow influencer function hit');
+        // fetch('/api/users/followInfluencer')
+    }
+
 
     /*--- Lifecycle Methods ---*/
 
@@ -61,7 +66,8 @@ class InfluencerPage extends Component {
                         subCount={this.state.subCount}
                     />
                     <FavoriteButton 
-                        influencer={this.state.influencer}/>
+                        influencer={this.state.influencer}
+                        handleFollow={this.handleFollow}/>
                     <Favorites
                         influencer={this.state.influencer}
                     />

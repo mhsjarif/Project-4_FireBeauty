@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {
     BrowserRouter as Router,
     Switch,
@@ -23,55 +23,55 @@ class App extends Component {
 
     handleLogout = () => {
         userService.logout();
-        this.setState({user: null});
-      }
-    
-      handleSignup = () => {
-        this.setState({user: userService.getUser()});
-      }
-    
-      handleLogin = () => {
-        this.setState({user: userService.getUser()});
-      }
+        this.setState({ user: null });
+    }
+
+    handleSignup = () => {
+        this.setState({ user: userService.getUser() });
+    }
+
+    handleLogin = () => {
+        this.setState({ user: userService.getUser() });
+    }
 
     render() {
         return (
             <div>
                 <Router>
                     <div>
-                    <NavBar
-                        user={this.state.user}
-                        handleLogout={this.handleLogout}
-                    />
-                    <Switch>
-                        <Route exact path='/' render={(props) =>
-                            <HomePage
-                                {...props}
-                            />
-                        }/>
-                        <Route exact path='/influencer/:id' render={(props) =>
-                            <InfluencerPage
-                                {...props}
-                            />
-                        }/>
-                        <Route exact path='/followed' render={(props) =>
-                            <FollowedPage
-                                {...props}
-                            />
-                        }/>
-                        <Route exact path='/login' render={(props) =>
-                            <LoginPage 
-                                {...props}
-                                handleLogin={this.handleLogin}
-                            />
-                        }/>
-                        <Route exact path='/signup' render={(props) =>
-                            <SignupPage 
-                                {...props}
-                                handleSignup={this.handleSignup}
-                            />
-                        }/>
-                    </Switch>
+                        <NavBar
+                            user={this.state.user}
+                            handleLogout={this.handleLogout}
+                        />
+                        <Switch>
+                            <Route exact path='/' render={(props) =>
+                                <HomePage
+                                    {...props}
+                                />
+                            } />
+                            <Route exact path='/influencer/:id' render={(props) =>
+                                <InfluencerPage
+                                    {...props}
+                                />
+                            } />
+                            <Route exact path='/followed' render={(props) =>
+                                <FollowedPage
+                                    {...props}
+                                />
+                            } />
+                            <Route exact path='/login' render={(props) =>
+                                <LoginPage
+                                    {...props}
+                                    handleLogin={this.handleLogin}
+                                />
+                            } />
+                            <Route exact path='/signup' render={(props) =>
+                                <SignupPage
+                                    {...props}
+                                    handleSignup={this.handleSignup}
+                                />
+                            } />
+                        </Switch>
                     </div>
                 </Router>
             </div>

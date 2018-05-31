@@ -5,7 +5,7 @@ import './InfluencerBio.css';
 const InfluencerBio = (props) => {
     return (
     <div>
-        <a href={props.channelUrl}>
+        <a href={props.channelUrl} target="_blank">
             <div>
                 {props.channelName}
             </div>

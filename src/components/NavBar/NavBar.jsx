@@ -20,7 +20,7 @@ const NavBar = (props) => (
                 <div className="logo">
                     <Link to='/'><img src='https://i.imgur.com/JCOOFsB.png?1' alt="Fire Beauty Logo"/></Link>
                 </div>
-                <Link className="nav-item" to='/followed'>Followed</Link>
+                {/* <Link className="nav-item" to='/followed'>Followed</Link> */}
                 <Link className="nav-item" to='/login'>Log In</Link>
                 <Link className="nav-item" to='/signup'>Sign Up</Link>
             </div>
