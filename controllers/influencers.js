@@ -1,7 +1,7 @@
 var Influencer = require('../models/influencer');
 var request = require('request');
 var ROOT_URL = 'https://www.googleapis.com/youtube/v3/';
-var YT_PART = 'snippet,contentDetails,statistics,status';
+var YT_PART = 'snippet,contentDetails,statistics,status,brandingSettings';
 
 function getAllInfluencers(req, res) {
     Influencer.find({})
@@ -10,7 +10,7 @@ function getAllInfluencers(req, res) {
 
 function getInfluencer(req, res) {
     Influencer.find({_id: req.params.id})
-    .then(influencer => res.json(influencer))
+    .populate('favorites').exec((err, influencer) => res.json(influencer))
 }
 
 function getYouTubeChannel(req, res) {
@@ -20,7 +20,10 @@ function getYouTubeChannel(req, res) {
             // console.log(data.items);
             res.json(
                 {channelName: data.items[0].snippet.title, 
-                 thumbnailUrl: data.items[0].snippet.thumbnails.medium.url
+                 thumbnailUrl: data.items[0].snippet.thumbnails.medium.url,
+                 channelUrl: data.items[0].snippet.customUrl,
+                 subCount: data.items[0].statistics.subscriberCount,
+                 influencerBanner: data.items[0].brandingSettings.image.bannerImageUrl
                 }
             )
         }

@@ -65,7 +65,7 @@ seed
             category: "Concealer",
             name: "Make Up For Ever Ultra HD Invisible Cover Concealer",
             price: 28.00,
-            img: `${IMG_URL}BVIKdw.png`,
+            img: `${IMG_URL}iBVIKdw.png`,
             link: 'https://www.makeupforever.com/us/en-us/make-up/face/concealer/ultra-hd-concealer'
         },
         {

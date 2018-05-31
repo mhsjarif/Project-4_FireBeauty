@@ -1,0 +1,17 @@
+.favorite-container {
+    flex-wrap: wrap;
+    display: flex;
+    width: 80%;
+}
+
+.favorite-container div {
+    display: flex;
+    align-items: center;
+}
+
+.favorite-img img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 2px solid #F5BEB8;
+}

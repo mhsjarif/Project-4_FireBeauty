@@ -2,12 +2,15 @@ import React from 'react';
 import './Favorites.css';
 
 const Favorites = (props) => {
-    console.log(props.influencer)
     return (
-        <div>
-            <ul>
-                {props.influencer.favorites.map(fav => <li>{fav}</li>)}
-            </ul>
+        <div className="favorite-container">
+            {props.influencer.favorites.map(fav => 
+            <div>
+                <div className="favorite-img">
+                    <img src={fav.img}/>
+                </div>
+                {fav.name}
+            </div>)}
         </div>
     )
 }

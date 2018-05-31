@@ -6,6 +6,7 @@ const InfluencerBio = (props) => (
     <div>
         This is influencer is: 
         {props.influencer.name}
+        {/* <object className="video" data={props.influencer.video_url} /> */}
     </div>
 )
 

@@ -20,31 +20,26 @@ class InfluencerPage extends Component {
         })
     }
 
+    getYouTubeInfo = (influencer) => {
+        fetch(`/api/influencers/${influencer.youtube_id}/channel`)
+        .then(res => res.json())
+        .then(data => {
+            this.setState({
+                channelName: data.channelName, 
+                thumbnailUrl: data.thumbnailUrl,
+                channelUrl: data.channelUrl,
+                subCount: data.subCount,
+                influencerBanner: data.influencerBanner
+            })
+        })
+    }
+
+
     /*--- Lifecycle Methods ---*/
 
     componentDidMount(props) {
-        this.getInfluencer(props);
+        this.getInfluencer(props)
     }
-
-    // render() {
-    //     console.log(influencer);
-    //     let influencer = null;
-
-    //     if (this.state.influencers) {
-    //         influencer = this.state.influencer
-    //     }
-
-    //     return (
-    //         <div>
-    //             this is the InfluencerPage.
-    //             <InfluencerBanner />
-    //             <InfluencerBio 
-    //                 influencer={influencer}/>
-    //             <Favorites 
-    //                 influencer={influencer}/>
-    //         </div>
-    //     )
-    // }
 
     render() {
         let influencer = null;
@@ -52,10 +47,12 @@ class InfluencerPage extends Component {
         if (this.state.influencer) {
             influencer = (
                 <div>
-                    <Favorites
+                    <InfluencerBanner />
+                    <InfluencerBio 
                         influencer={this.state.influencer[0]}
                     />
-                    <InfluencerBio 
+
+                    <Favorites
                         influencer={this.state.influencer[0]}
                     />
                 </div>

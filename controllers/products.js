@@ -6,6 +6,8 @@ function getProduct(req, res) {
     .then(product => res.json(product))
 }
 
+
+
 module.exports = {
     getProduct
 }
