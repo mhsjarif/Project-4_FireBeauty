@@ -2,7 +2,7 @@ import React from 'react';
 import './FavoriteButton.css';
 
 const FavoriteButton = (props) => (
-    <button class="button fav-button">fav</button>
+    <button className="button fav-button">♥</button>
 )
 
 export default FavoriteButton;

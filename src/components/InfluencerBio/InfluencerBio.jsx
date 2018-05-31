@@ -1,13 +1,24 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router-dom'
+import React from 'react';
+// import {Link} from 'react-router-dom'
 import './InfluencerBio.css';
 
-const InfluencerBio = (props) => (
+const InfluencerBio = (props) => {
+    return (
     <div>
-        This is influencer is: 
-        {props.influencer.name}
+        <a href={props.channelUrl}>
+            <div>
+                {props.channelName}
+            </div>
+            <div>
+                <img src={props.thumbnailUrl} alt={props.channelName}/>
+            </div>
+        </a>
+        {/* // come back to figure out how the fuck the change to a number with commas// */}
+        <div className="sub-count">{props.subCount} subscribers</div>
+        
+        
         {/* <object className="video" data={props.influencer.video_url} /> */}
     </div>
 )
-
+}
 export default InfluencerBio;

@@ -8,7 +8,7 @@ const Favorites = (props) => {
             <a href={fav.link}  target="_blank">
                 <div>
                     <div className="favorite-img">
-                        <img src={fav.img}/>
+                        <img src={fav.img} alt="Favorite Product"/>
                     </div>
                     {fav.name}
                 </div>

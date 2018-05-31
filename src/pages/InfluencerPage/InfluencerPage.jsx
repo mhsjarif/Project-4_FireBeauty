@@ -51,9 +51,14 @@ class InfluencerPage extends Component {
         if (this.state.influencer) {
             influencer = (
                 <div>
-                    <InfluencerBanner />
+                    <InfluencerBanner 
+                        influencerBanner={this.state.influencerBanner}/>
                     <InfluencerBio 
-                        influencer={this.state.influencer}
+                        influencer={this.state.influencer} 
+                        channelName={this.state.channelName} 
+                        thumbnailUrl={this.state.thumbnailUrl}
+                        channelUrl={this.state.channelUrl}
+                        subCount={this.state.subCount}
                     />
                     <FavoriteButton 
                         influencer={this.state.influencer}/>

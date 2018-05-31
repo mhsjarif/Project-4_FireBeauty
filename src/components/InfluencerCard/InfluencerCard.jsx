@@ -28,7 +28,7 @@ class InfluencerCard extends Component {
             <div className="influencer-card">
                 <Link to={`/influencer/${this.props.influencer._id}`}>
                     <h4>{this.state.channelName}</h4>
-                    <img src={this.state.imageUrl}/>
+                    <img src={this.state.imageUrl} alt="Influencer" />
                 </Link>
             </div>
         )

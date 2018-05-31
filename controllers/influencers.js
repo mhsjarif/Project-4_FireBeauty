@@ -21,7 +21,7 @@ function getYouTubeChannel(req, res) {
             res.json(
                 {channelName: data.items[0].snippet.title, 
                  thumbnailUrl: data.items[0].snippet.thumbnails.medium.url,
-                 channelUrl: data.items[0].snippet.customUrl,
+                 channelUrl: `https://www.youtube.com/channel/${data.items[0].id}`,
                  subCount: data.items[0].statistics.subscriberCount,
                  influencerBanner: data.items[0].brandingSettings.image.bannerImageUrl
                 }
