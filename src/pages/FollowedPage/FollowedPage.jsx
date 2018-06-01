@@ -27,9 +27,9 @@ class FollowedPage extends Component {
         //if there is a user AND the first followed has a name//
         if (this.props.user && this.props.user.followed[0].name) {
             console.log(this.props.user.followed)
-            categoryFavorite = this.props.user.followed.map(userFollowed => 
+            categoryFavorite = this.props.user.followed.map((userFollowed, idx) => 
                 // console.log(userFollowed.favorites);
-                <div>
+                <div key={idx}>
                     {userFollowed.name}
                     {userFollowed.favorites.filter(fav => fav.category === this.state.selectedCategory).map( catFav =>
                         <div>
@@ -39,8 +39,8 @@ class FollowedPage extends Component {
                     )}
                 </div>
             )
-            userFollowed = this.props.user.followed.map(userFollowed =>
-                <div>
+            userFollowed = this.props.user.followed.map((userFollowed, idx) =>
+                <div key={idx}>
                     <InfluencerCard
                         influencer={userFollowed} />
                     <FollowedInfluencer
@@ -61,7 +61,7 @@ class FollowedPage extends Component {
                         <option value="Setting Spray">Setting Spray</option>
                         <option value="Powder">Powder</option>
                         <option value="Contour">Contour</option>
-                        <option value="Highligher">Highligher</option>
+                        <option value="Highlighter">Highlighter</option>
                         <option value="Blush">Blush</option>
                         <option value="Eyeliner">Eyeliner</option>
                         <option value="Lipstick">Lipstick</option>

@@ -3,7 +3,7 @@ import './FollowedInfluencer.css';
 
 const FollowedInfluencer = (props) => (
     <div>
-        {props.userFollowed.favorites.map(fav => <div>{fav.name}</div>)}
+        {props.userFollowed.favorites.map((fav, idx) => <div key={idx}>{fav.name}</div>)}
     </div>
 )
 
