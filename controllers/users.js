@@ -26,7 +26,24 @@ function login(req, res) {
 }
 
 function followInfluencer(req, res) {
-  console.log('followInfluencer function hit!')
+  User.findOne({_id: req.user._id}, function(err, user) {
+    if (!user.followed.some(i => i.equals(req.params.id))) {
+      user.followed.push(req.params.id);
+      user.save((err, user) => res.json(user));
+    }
+  })
+}
+
+function getFollowed(req, res) {
+  User.findById(req.user._id).populate({
+      path: 'followed',
+      populate: {
+        path: 'favorites'
+      }
+  }).exec((err, user) => {
+    res.json(user);
+    console.log(user.followed[0]);
+  })
 }
 
 /*----- Helper Functions -----*/
@@ -42,5 +59,6 @@ function createJWT(user) {
 module.exports = {
   signup,
   login,
-  followInfluencer
+  followInfluencer,
+  getFollowed
 };

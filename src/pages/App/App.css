@@ -11,3 +11,7 @@ a {
     text-decoration: none;
     font-weight: normal;
 }
+
+button:focus {
+    outline: none;
+}

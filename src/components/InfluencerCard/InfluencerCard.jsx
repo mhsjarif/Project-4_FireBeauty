@@ -25,10 +25,12 @@ class InfluencerCard extends Component {
 
     render() {
         return (
-            <div className="influencer-card">
+            <div className="card-container">
                 <Link to={`/influencer/${this.props.influencer._id}`}>
-                    <h4>{this.state.channelName}</h4>
-                    <img src={this.state.imageUrl} alt="Influencer" />
+                <div className="card-image"><img src={this.state.imageUrl}  alt="Influencer"/></div>
+                <div className="card-overlay">
+                    <div className="overlay-text">{this.state.channelName}</div>
+                </div>
                 </Link>
             </div>
         )

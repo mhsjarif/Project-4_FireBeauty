@@ -11,13 +11,14 @@ import InfluencerPage from '../InfluencerPage/InfluencerPage';
 import LoginPage from '../LoginPage/LoginPage';
 import SignupPage from '../SignupPage/SignupPage';
 import userService from '../../utils/userService';
+import tokenService from '../../utils/tokenService';
 import NavBar from '../../components/NavBar/NavBar';
 
 class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-
+            user: userService.getUser()
         }
     }
 
@@ -32,6 +33,32 @@ class App extends Component {
 
     handleLogin = () => {
         this.setState({ user: userService.getUser() });
+    }
+
+    handleFollow = (influencer) => {
+        fetch(`/api/users/followInfluencer/${influencer}`, {
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + tokenService.getToken()
+            }
+        })
+        .then(res => res.json())
+        .then(user => {
+            this.setState({user})
+        });
+    }
+
+    getFollowed = () => {
+        return fetch('/api/users/followed', {
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + tokenService.getToken()
+            }
+        })
+        .then(res => res.json())
+        .then(user => {
+            this.setState({user})
+        });
     }
 
     render() {
@@ -52,11 +79,14 @@ class App extends Component {
                             <Route exact path='/influencer/:id' render={(props) =>
                                 <InfluencerPage
                                     {...props}
+                                    handleFollow={this.handleFollow}
                                 />
                             } />
                             <Route exact path='/followed' render={(props) =>
                                 <FollowedPage
                                     {...props}
+                                    user={this.state.user}
+                                    getFollowed={this.getFollowed}
                                 />
                             } />
                             <Route exact path='/login' render={(props) =>

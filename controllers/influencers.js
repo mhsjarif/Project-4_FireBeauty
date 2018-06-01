@@ -1,4 +1,5 @@
 var Influencer = require('../models/influencer');
+var User = require('../models/user');
 var request = require('request');
 var ROOT_URL = 'https://www.googleapis.com/youtube/v3/';
 var YT_PART = 'snippet,contentDetails,statistics,status,brandingSettings';
@@ -17,7 +18,6 @@ function getYouTubeChannel(req, res) {
    request(`${ROOT_URL}channels?id=${req.params.youtubeId}&key=${process.env.YT_API_KEY}&part=${YT_PART}`, 
         function(err, response, body) {
             var data = JSON.parse(body);
-            // console.log(data.items);
             res.json(
                 {channelName: data.items[0].snippet.title, 
                  thumbnailUrl: data.items[0].snippet.thumbnails.medium.url,

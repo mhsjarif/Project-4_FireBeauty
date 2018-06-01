@@ -4,6 +4,7 @@ import InfluencerBanner from '../../components/InfluencerBanner/InfluencerBanner
 import InfluencerBio from '../../components/InfluencerBio/InfluencerBio';
 import Favorites from '../../components/Favorites/Favorites';
 import FavoriteButton from '../../components/FavoriteButton/FavoriteButton';
+import InfluencerVideo from '../../components/InfluencerVideo/InfluencerVideo';
 
 class InfluencerPage extends Component {
     constructor(props) {
@@ -17,7 +18,11 @@ class InfluencerPage extends Component {
         return fetch(`/api/influencers/${this.props.match.params.id}`)
         .then(res => res.json())
         .then(influencer => {
-            this.setState({influencer: influencer[0]})
+            this.setState({
+                influencer: influencer[0],
+                videoUrl: influencer[0].video_url
+            })
+            console.log(this.state.videoUrl)
         });
     }
 
@@ -34,12 +39,6 @@ class InfluencerPage extends Component {
             })
         })
     }
-
-    handleFollow = (props) => {
-        console.log('client side follow influencer function hit');
-        // fetch('/api/users/followInfluencer')
-    }
-
 
     /*--- Lifecycle Methods ---*/
 
@@ -67,7 +66,9 @@ class InfluencerPage extends Component {
                     />
                     <FavoriteButton 
                         influencer={this.state.influencer}
-                        handleFollow={this.handleFollow}/>
+                        handleFollow={this.props.handleFollow}/>
+                    <InfluencerVideo 
+                        videoUrl={this.state.videoUrl}/>
                     <Favorites
                         influencer={this.state.influencer}
                     />
