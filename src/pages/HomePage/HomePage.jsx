@@ -28,9 +28,10 @@ class HomePage extends Component {
         let influencers = null;
 
         if (this.state.influencers) {
-            influencers = this.state.influencers.map(influencer => 
+            influencers = this.state.influencers.map((influencer, idx) => 
                 <InfluencerCard 
                     influencer={influencer}
+                    key={idx}
                 />
             )
         }
