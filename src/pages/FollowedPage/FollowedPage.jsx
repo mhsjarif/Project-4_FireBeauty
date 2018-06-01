@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './FollowedPage.css';
-import FollowedInfluencer from '../../components/FollowedInfluencer/FollowedInfluencer';
 import InfluencerCard from '../../components/InfluencerCard/InfluencerCard';
 
 class FollowedPage extends Component {
@@ -12,7 +11,6 @@ class FollowedPage extends Component {
     }
 
     selectCategory = (e) => {
-        console.log('select function hit, fuckhead.', e.target.value)
         this.setState({selectedCategory: e.target.value})
     }
 
@@ -21,31 +19,20 @@ class FollowedPage extends Component {
     }
 
     render() {
-        let userFollowed = null;
         let categoryFavorite = null;
 
         //if there is a user AND the first followed has a name//
         if (this.props.user && this.props.user.followed[0].name) {
-            console.log(this.props.user.followed)
             categoryFavorite = this.props.user.followed.map((userFollowed, idx) => 
-                // console.log(userFollowed.favorites);
                 <div key={idx}>
-                    {userFollowed.name}
+                    <InfluencerCard
+                        influencer={userFollowed} />
                     {userFollowed.favorites.filter(fav => fav.category === this.state.selectedCategory).map( catFav =>
                         <div>
                             {catFav.name}
                             <img src={catFav.img} alt="category fav"/>
                         </div>
                     )}
-                </div>
-            )
-            userFollowed = this.props.user.followed.map((userFollowed, idx) =>
-                <div key={idx}>
-                    <InfluencerCard
-                        influencer={userFollowed} />
-                    <FollowedInfluencer
-                        userFollowed={userFollowed}
-                    />
                 </div>
             )
         }
@@ -73,7 +60,6 @@ class FollowedPage extends Component {
                 <h3>Your Followed Influencers</h3>
                 <div>{categoryFavorite}</div>
                 <div className="followed-card">
-                    {userFollowed}
                 </div>
             </div>
         )

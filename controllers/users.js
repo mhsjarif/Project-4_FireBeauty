@@ -42,7 +42,6 @@ function getFollowed(req, res) {
       }
   }).exec((err, user) => {
     res.json(user);
-    console.log(user.followed[0]);
   })
 }
 
