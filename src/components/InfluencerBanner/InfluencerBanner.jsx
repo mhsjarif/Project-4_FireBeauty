@@ -1,5 +1,5 @@
 import React from 'react';
-import './InfluencerBanner';
+import './InfluencerBanner.css';
 
 const InfluencerBanner = (props) => (
     <div className="influencer-banner">

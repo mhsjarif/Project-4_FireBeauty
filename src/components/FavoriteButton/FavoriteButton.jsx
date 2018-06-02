@@ -3,7 +3,7 @@ import './FavoriteButton.css';
 
 const FavoriteButton = (props) => {
     return (
-        <button className="button fav-button" onClick={() => props.handleFollow(props.influencer._id)}>♥</button>
+        <button className="button fav-button" onClick={() => props.click(props.influencer._id)}>{props.heart}</button>
     )
 }
 

@@ -22,7 +22,7 @@ class App extends Component {
         }
     }
 
-    handleLogout = () => {
+    handleLogout = (props) => {
         userService.logout();
         this.setState({ user: null });
     }
@@ -80,6 +80,7 @@ class App extends Component {
                                 <InfluencerPage
                                     {...props}
                                     handleFollow={this.handleFollow}
+                                    user={this.state.user}
                                 />
                             } />
                             <Route exact path='/followed' render={(props) =>

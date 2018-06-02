@@ -63,10 +63,23 @@ class InfluencerPage extends Component {
                         thumbnailUrl={this.state.thumbnailUrl}
                         channelUrl={this.state.channelUrl}
                         subCount={this.state.subCount}
+                        instagram={this.state.influencer.instagram} 
+                        twitter={this.state.influencer.twitter}
                     />
+                    {this.props.user.followed.some(f => f === this.state.influencer._id) ?
                     <FavoriteButton 
                         influencer={this.state.influencer}
-                        handleFollow={this.props.handleFollow}/>
+                        click={this.props.handleFollow}
+                        heart="♡"
+                        />
+                        :
+                        <FavoriteButton 
+                            influencer={this.state.influencer}
+                            click={this.props.handleUnfollow}
+                            heart="♥"
+                            />
+                    }
+                    
                     <InfluencerVideo 
                         videoUrl={this.state.videoUrl}/>
                     <Favorites

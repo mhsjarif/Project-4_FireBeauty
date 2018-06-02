@@ -14,9 +14,17 @@ const InfluencerBio = (props) => {
         
         {/* // come back to figure out how the fuck the change to a number with commas// */}
         <div className="sub-count">{props.subCount} subscribers</div>
-        <a href={props.channelUrl} target="_blank">
-        <img src="https://i.imgur.com/FeaE4tA.png" alt="youtube logo"/>
-        </a>
+        <div className="social-media">
+            <a href={props.channelUrl} target="_blank">
+                <img src="https://i.imgur.com/FeaE4tA.png" alt="youtube logo"/>
+            </a>
+            <a href={props.instagram} target="_blank">
+                <img src="https://i.imgur.com/2FXIhm2.png" alt="insta logo"/>
+            </a>
+            <a href={props.twitter} target="_blank">
+                <img src="https://i.imgur.com/dqAP8Yp.png" alt="insta logo"/>
+            </a>
+        </div>
 
         
         {/* <object className="video" data={props.influencer.video_url} /> */}

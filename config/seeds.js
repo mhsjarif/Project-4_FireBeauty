@@ -525,6 +525,8 @@ seed
                 name: 'Tati', 
                 youtube_id: 'UC4qk9TtGhBKCkoWz5qGJcGg', 
                 video_url: `${YT_URL}HBqcoSnG_n4`, 
+                instagram: 'https://www.instagram.com/glamlifeguru/',
+                twitter: 'https://twitter.com/glamlifeguru',
                 favorites:[
                     // 1. Foundation // 
                     products.find(p => p.name === "Hourglass Vanish Stick Foundation"), 
@@ -556,6 +558,8 @@ seed
                 name: 'nikkietutorials', 
                 youtube_id: 'UCzTKskwIc_-a0cGvCXA848Q', 
                 video_url: `${YT_URL}aCoDqL1dK9c`, 
+                instagram: 'https://www.instagram.com/nikkietutorials/',
+                twitter: 'https://twitter.com/NikkieTutorials',
                 favorites:[
                     // 1. Foundation // 
                     products.find(p => p.name === "Huda Beauty Faux Filter Foundation"), 
@@ -587,6 +591,8 @@ seed
                 name: 'jeffreestar', 
                 youtube_id: 'UCkvK_5omS-42Ovgah8KRKtg', 
                 video_url: `${YT_URL}ebOqNwr9sl0`, 
+                instagram: 'https://www.instagram.com/jeffreestar/',
+                twitter: 'https://twitter.com/JeffreeStar',
                 favorites:[
                     // 1. Foundation // 
                     products.find(p => p.name === "La Mer The Soft Fluid Long Wear Foundation"), 
@@ -618,6 +624,8 @@ seed
                 name: 'Wayne Goss', 
                 youtube_id: 'UCCvoAe__WFYMNAEN-C-CtYA', 
                 video_url: `${YT_URL}Tj8W3c4qN_M`, 
+                instagram: 'https://www.instagram.com/gossmakeupartist/',
+                twitter: 'https://twitter.com/gossmakeupartis',
                 favorites:[
                     // 1. Foundation // 
                     products.find(p => p.name === "Nars Radient Long Wear Foundation"), 
@@ -649,6 +657,8 @@ seed
                 name: 'Jaclyn Hill', 
                 youtube_id: 'UC6jgzx2g3nlbaYkd8EMweKA', 
                 video_url: `${YT_URL}mTHLyCqtLJE`, 
+                instagram: 'https://www.instagram.com/jaclynhill/',
+                twitter: 'https://twitter.com/Jaclynhill',
                 favorites:[
                     // 1. Foundation // 
                     products.find(p => p.name === "Dior Diorskin Forever Foundation"), 
@@ -680,6 +690,8 @@ seed
                 name: 'Desi Perkins', 
                 youtube_id: 'UCG9nVSLp4nQlW79sY5ihRrg', 
                 video_url: `${YT_URL}j1f04Jg7IaA`, 
+                instagram: 'https://www.instagram.com/desiperkins/',
+                twitter: 'https://twitter.com/DesiPerkins',
                 favorites:[
                     // 1. Foundation // 
                     products.find(p => p.name === "Nars Radient Long Wear Foundation"), 
@@ -711,9 +723,11 @@ seed
                 name: 'LustreLux', 
                 youtube_id: 'UCC0EqtXQ9at6ON_-ZYJaImA', 
                 video_url: `${YT_URL}AoJ8uMh4h4o`, 
+                instagram: 'https://www.instagram.com/katy/',
+                twitter: 'https://twitter.com/lustrelux',
                 favorites:[
                     // 1. Foundation // 
-                    products.find(p => p.name === "Armani Luminous Silk Foundation"), 
+                    products.find(p => p.name === "Giorgio Armani Luminous Silk Foundation"), 
                     // 2. Concealer //
                     products.find(p => p.name === "Tarte Shape Tape Contour Concealer"), 
                     // 3. Setting Spray //
@@ -742,6 +756,8 @@ seed
             //     name: 'nikkietutorials', 
             //     youtube_id: '', 
             //     video_url: `${YT_URL}`, 
+            //     instagram: 'https://www.instagram.com/katy/',
+            //     twitter: 'https://twitter.com/lustrelux',
             //     favorites:[
             //         // 1. Foundation // 
             //         products.find(p => p.name === ""), 

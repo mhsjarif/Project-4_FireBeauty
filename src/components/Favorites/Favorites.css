@@ -2,16 +2,68 @@
     flex-wrap: wrap;
     display: flex;
     width: 80%;
+    margin: 0 auto;
 }
 
-.favorite-container div {
-    display: flex;
+.favorite-card {
+    position: relative;    
     align-items: center;
+    padding: 10px;
+    width: 500px;
+    height: 205px;
+    margin: 10px;
 }
 
-.favorite-img img {
+.favorite-card img {
+    float: left;
     height: 200px;
     width: 200px;
     border-radius: 50%;
     border: 2px solid #F5BEB8;
 }
+
+.favorite-card-text {
+    width: 275px;
+    float: right;
+    margin: 40px 5px 0 0;
+    text-align: justify;
+    vertical-align: middle;
+}
+
+.favorite-card-text div:first-child {
+    background-color: lightgray;
+    border-radius: 10px;
+    padding: 7px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.favorite-overlay {
+    position: absolute;
+    top: 12px;
+    bottom: 0;
+    left: 12px;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color:white;
+  }
+
+  .favorite-overlay-text {
+    font-family: 'Quicksand', sans-serif;
+    color: #894746;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .favorite-card:hover .favorite-overlay {
+    opacity: .8;
+  }
