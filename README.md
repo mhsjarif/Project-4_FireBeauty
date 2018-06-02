@@ -18,15 +18,11 @@ fire beauty is a blah blah blah blalahhh
 [Fire Beauty Trello page](https://trello.com/b/ETxQGdNU/fire-beauty)
 
 # Getting Started
-Create your own account or use:
-email: user@user
-password: password
-to get started
-
+Create your own account or use the provided account to get started:
 email | password|
 --- | --- |
 *user@user* | *password* |
-1 | 2 |
+
 
 [Fire Beauty on Heroku](https://fire-beauty.herokuapp.com/)
 
