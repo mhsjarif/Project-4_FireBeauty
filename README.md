@@ -18,10 +18,14 @@ fire beauty is a blah blah blah blalahhh
 [Fire Beauty Trello page](https://trello.com/b/ETxQGdNU/fire-beauty)
 
 # Getting Started
+Create your own account or use:
+email: user@user
+password: password
+to get started
 [Fire Beauty on Heroku](https://fire-beauty.herokuapp.com/)
 
 # Next Steps
-* Add attraction "recommend/not recommended" functionality for users.
-* Add dynamic visual stars for rating selection and average attraction ratings.
-* Let users select whether other user reviews were helpful or not.
-* Add Admin
+* Expose Fire Beauty API
+* Add user favorites feature
+* Add many more influencers
+* Add admin to add products from the app
