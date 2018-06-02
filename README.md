@@ -19,6 +19,7 @@ fire beauty is a blah blah blah blalahhh
 
 # Getting Started
 Create your own account or use the provided account to get started:
+
 email | password|
 --- | --- |
 *user@user* | *password* |
