@@ -3,3 +3,18 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+
+.influencers-header {
+    font-family: 'Dancing Script', cursive;
+    color: #91000E;
+    text-align: center;
+    font-size: 36px;
+    background-color: #ffe8e8;
+    width: 80%;
+    margin: 1% auto;
+    border-radius: 5px;
+}
+
+.influencers-header img {
+    height: 30px;
+}

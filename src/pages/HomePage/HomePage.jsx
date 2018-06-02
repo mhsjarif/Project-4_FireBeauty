@@ -37,8 +37,15 @@ class HomePage extends Component {
         }
 
         return (
-            <div className="card-wrapper">
-                {influencers}
+            <div>
+                <div className="influencers-header">
+                    <img src="https://i.imgur.com/Zq60YVW.png" alt="fire"/>
+                        &nbsp;Fire Beauty Influencers&nbsp;
+                    <img src="https://i.imgur.com/Zq60YVW.png" alt="fire"/>
+                </div>
+                <div className="card-wrapper">
+                    {influencers}
+                </div>
             </div>
         )
     }

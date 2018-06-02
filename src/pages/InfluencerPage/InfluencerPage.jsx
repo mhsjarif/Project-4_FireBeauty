@@ -51,7 +51,7 @@ class InfluencerPage extends Component {
 
     render() {
         let influencer = null;
-
+        
         if (this.state.influencer) {
             influencer = (
                 <div>
@@ -66,17 +66,19 @@ class InfluencerPage extends Component {
                         instagram={this.state.influencer.instagram} 
                         twitter={this.state.influencer.twitter}
                     />
-                    {this.props.user.followed.some(f => f === this.state.influencer._id) ?
+                    {this.props.user.followed.includes(this.state.influencer._id) || this.props.user.followed.some(f => f._id === this.state.influencer._id) ?
+                    // IF THEY ARE FOLLOWED
                     <FavoriteButton 
                         influencer={this.state.influencer}
                         click={this.props.handleFollow}
-                        heart="♡"
+                        heart="Unfollow this Influencer"
                         />
                         :
+                    // IF THEY ARE NOT FOLLOWED
                         <FavoriteButton 
                             influencer={this.state.influencer}
-                            click={this.props.handleUnfollow}
-                            heart="♥"
+                            click={this.props.handleFollow}
+                            heart="Follow this Influencer"
                             />
                     }
                     
@@ -84,6 +86,7 @@ class InfluencerPage extends Component {
                         videoUrl={this.state.videoUrl}/>
                     <Favorites
                         influencer={this.state.influencer}
+                        channelName={this.state.channelName} 
                     />
                 </div>
             )
