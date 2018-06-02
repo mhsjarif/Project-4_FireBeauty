@@ -35,11 +35,13 @@ class FollowedPage extends Component {
                     )}
                 </div>
             )
+        } else {
+            categoryFavorite =
+            <div>Start following influencers to discover some fire beauty!</div>
         }
 
         return (
             <div>
-                FollowedPage
                 <div className="category-selector">
                     <h4>I'm looking for a fire...</h4>
                     <div className="custom-select">
