@@ -1,12 +1,11 @@
 require('dotenv').config({path: './../.env'});
 console.log(process.env)
 require('./database');
-const YT_URL = 'https://www.youtube.com/watch?v=';
-const IMG_URL = 'https://i.imgur.com/';
 
 const Influencer = require('./../models/influencer');
 const Product = require('./../models/product');
 const User = require('./../models/user');
+const IMG_URL = 'https://i.imgur.com/';
 
 const seed = Promise.all([Influencer.remove({}), Product.remove({}), User.remove({})])
 
@@ -524,7 +523,7 @@ seed
             {
                 name: 'Tati', 
                 youtube_id: 'UC4qk9TtGhBKCkoWz5qGJcGg', 
-                video_url: `${YT_URL}HBqcoSnG_n4`, 
+                video_url: "HBqcoSnG_n4", 
                 instagram: 'https://www.instagram.com/glamlifeguru/',
                 twitter: 'https://twitter.com/glamlifeguru',
                 favorites:[
@@ -557,7 +556,7 @@ seed
             {
                 name: 'nikkietutorials', 
                 youtube_id: 'UCzTKskwIc_-a0cGvCXA848Q', 
-                video_url: `${YT_URL}aCoDqL1dK9c`, 
+                video_url: "aCoDqL1dK9c", 
                 instagram: 'https://www.instagram.com/nikkietutorials/',
                 twitter: 'https://twitter.com/NikkieTutorials',
                 favorites:[
@@ -590,7 +589,7 @@ seed
             {
                 name: 'jeffreestar', 
                 youtube_id: 'UCkvK_5omS-42Ovgah8KRKtg', 
-                video_url: `${YT_URL}ebOqNwr9sl0`, 
+                video_url: "ebOqNwr9sl0", 
                 instagram: 'https://www.instagram.com/jeffreestar/',
                 twitter: 'https://twitter.com/JeffreeStar',
                 favorites:[
@@ -623,7 +622,7 @@ seed
             {
                 name: 'Wayne Goss', 
                 youtube_id: 'UCCvoAe__WFYMNAEN-C-CtYA', 
-                video_url: `${YT_URL}Tj8W3c4qN_M`, 
+                video_url: "Tj8W3c4qN_M", 
                 instagram: 'https://www.instagram.com/gossmakeupartist/',
                 twitter: 'https://twitter.com/gossmakeupartis',
                 favorites:[
@@ -656,7 +655,7 @@ seed
             {
                 name: 'Jaclyn Hill', 
                 youtube_id: 'UC6jgzx2g3nlbaYkd8EMweKA', 
-                video_url: `${YT_URL}mTHLyCqtLJE`, 
+                video_url: "mTHLyCqtLJE", 
                 instagram: 'https://www.instagram.com/jaclynhill/',
                 twitter: 'https://twitter.com/Jaclynhill',
                 favorites:[
@@ -689,7 +688,7 @@ seed
             {
                 name: 'Desi Perkins', 
                 youtube_id: 'UCG9nVSLp4nQlW79sY5ihRrg', 
-                video_url: `${YT_URL}j1f04Jg7IaA`, 
+                video_url: "j1f04Jg7IaA", 
                 instagram: 'https://www.instagram.com/desiperkins/',
                 twitter: 'https://twitter.com/DesiPerkins',
                 favorites:[
@@ -722,7 +721,7 @@ seed
             {
                 name: 'LustreLux', 
                 youtube_id: 'UCC0EqtXQ9at6ON_-ZYJaImA', 
-                video_url: `${YT_URL}AoJ8uMh4h4o`, 
+                video_url: "AoJ8uMh4h4o", 
                 instagram: 'https://www.instagram.com/katy/',
                 twitter: 'https://twitter.com/lustrelux',
                 favorites:[
@@ -755,7 +754,7 @@ seed
             // {
             //     name: 'nikkietutorials', 
             //     youtube_id: '', 
-            //     video_url: `${YT_URL}`, 
+            //     video_url: ", 
             //     instagram: 'https://www.instagram.com/katy/',
             //     twitter: 'https://twitter.com/lustrelux',
             //     favorites:[

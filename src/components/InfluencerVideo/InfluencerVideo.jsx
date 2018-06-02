@@ -1,14 +1,25 @@
 import React from 'react';
+import YouTube from 'react-youtube';
 import './InfluencerVideo.css';
 
-const InfluencerVideo = (props) => (
-    <div>
-        <iframe className="player" type="text/html" width="100%" height="100%"
-  src={props.videoUrl}
-  frameBorder="0"/>
-        {/* <iframe width="854" height="480" src={props.videoUrl} frameborder="0" gesture="media" allowfullscreen></iframe> */}
-        {/* <iframe title="this is a title" width="560" height="315" src={props.videoUrl} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> */}
-    </div>
-)
+const InfluencerVideo = (props) => {
+    const opts = {
+        height: '390',
+        width: '640',
+        playerVars: {
+            autoplay: 1
+        }
+    };
+
+    return (
+        <div>
+            <YouTube
+                videoId={props.videoUrl}
+                opts={opts}
+            // onReady={this._onReady}
+          />
+        </div>
+    )
+}
 
 export default InfluencerVideo;
