@@ -49,6 +49,13 @@ seed
             link: 'https://www.narscosmetics.com/USA/fiji-natural-radiant-longwear-foundation/0607845066071.html'
         },
         {
+            category: "Foundation",
+            name: "Giorgio Armani Luminous Silk Foundation",
+            price: 64.00,
+            img: `${IMG_URL}BXByKZJ.png`,
+            link: 'https://www.giorgioarmanibeauty-usa.com/makeup/foundation/liquid-foundation/luminous-silk-foundation/A041.html'
+        },
+        {
             category: "Concealer",
             name: "Becca Aqua Luminous Perfecting Concealer",
             price: 32.00,
@@ -119,6 +126,13 @@ seed
             link: 'http://skindinavia.com/products/the-makeup-finishing-spray.html'
         },
         {
+            category: "Setting Spray",
+            name: "Cover FX Illuminating Setting Spray",
+            price: 31.00,
+            img: `${IMG_URL}JSt2SOq.png`,
+            link: 'https://www.coverfx.com/products/illuminating-setting-spray'
+        },
+        {
             category: "Powder",
             name: "Laura Mercier Loose Setting Powder",
             price: 38.00,
@@ -187,6 +201,13 @@ seed
             price: 57.00,
             img: `${IMG_URL}4wLGvi8.png`,
             link: 'https://www.rodial.co.uk/us/instaglam-compact-deluxe-bronzing-powder'
+        },
+        {
+            category: "Contour",
+            name: "Nars Bronzing Powder",
+            price: 40.00,
+            img: `${IMG_URL}AJkpDWQ.png`,
+            link: 'https://www.narscosmetics.com/USA/casino-bronzing-powder/0607845051022.html'
         },
         {
             category: "Highlighter",
@@ -266,6 +287,13 @@ seed
             link: 'http://www.natashadenona.com/products/base/highlighter/diamond-blush/darya'
         },
         {
+            category: "Blush",
+            name: "Laura Geller Baked Blush-N-Brighten",
+            price: 28.00,
+            img: `${IMG_URL}rY92aWR.png`,
+            link: 'https://www.laurageller.com/baked-blush-n-brighten.html'
+        },
+        {
             category: "Eyeliner",
             name: "L'Oreal Lacquer Liner",
             price: 9.95,
@@ -306,6 +334,13 @@ seed
             price: 57.00,
             img: `${IMG_URL}Wff3Kcd.png`,
             link: 'https://www.tomford.com/eye-defining-pen/T1W8.html'
+        },
+        {
+            category: "Eyeliner",
+            name: "Inglot AMC Eyeliner Gel",
+            price: 17.00,
+            img: `${IMG_URL}sxS8QYC.png`,
+            link: 'https://inglotusa.com/eyeliners/99-amc-eyeliner-gel'
         },
         {
             category: "Lipstick",
@@ -350,6 +385,13 @@ seed
             link: 'https://www.smashbox.com/product/6126/42295/lips-cheek/lipstick-liner/always-on-liquid-lipstick#/shade/Babe_Alert'
         },
         {
+            category: "Lipstick",
+            name: "Maybelline Superstay Matte Ink Liquid Lipstick",
+            price: 9.49,
+            img: `${IMG_URL}XxPJzeb.png`,
+            link: 'https://www.maybelline.com/lip-makeup/lipstick/superstay-matte-ink-liquid-lipstick'
+        },
+        {
             category: "Mascara",
             name: "L'Oreal Voluminous Lash Paradise Mascara",
             price: 9.99,
@@ -383,6 +425,13 @@ seed
             price: 19.00,
             img: `${IMG_URL}LsajwBf.png`,
             link: 'https://www.maccosmetics.com/product/13839/21069/products/makeup/eyes/mascara/extended-play-lash-mascara'
+        },
+        {
+            category: "Mascara",
+            name: "Too Faced Better Than Sex Mascara",
+            price: 23.00,
+            img: `${IMG_URL}AKOCBVw.png`,
+            link: 'https://www.toofaced.com/eye-makeup/mascara/better-than-sex-mascara/80021.html'
         },
         {
             category: "Brow",
@@ -460,6 +509,13 @@ seed
             price: 38.00,
             img: `${IMG_URL}fUjs4bu.png`,
             link: 'https://www.morphebrushes.com/products/jh2-jaclyn-hill-ii-palette'
+        },
+        {
+            category: "Eyeshadow",
+            name: "DOSE of Colors Baked Browns",
+            price: 32.00,
+            img: `${IMG_URL}YRVO4Yt.png?1`,
+            link: 'https://doseofcolors.com/collections/palette/products/baked-browns'
         }
     ])
 })
@@ -649,6 +705,37 @@ seed
                     products.find(p => p.name === "Benefit Ka-BROW! Eyebrow Cream-Gel Color"), 
                     // 12. Eyeshadow //
                     products.find(p => p.name === "Kat Von D MetalMatte Mini Eyeshadow Palette") 
+                ]
+            },
+            {
+                name: 'LustreLux', 
+                youtube_id: 'UCC0EqtXQ9at6ON_-ZYJaImA', 
+                video_url: `${YT_URL}AoJ8uMh4h4o`, 
+                favorites:[
+                    // 1. Foundation // 
+                    products.find(p => p.name === "Armani Luminous Silk Foundation"), 
+                    // 2. Concealer //
+                    products.find(p => p.name === "Tarte Shape Tape Contour Concealer"), 
+                    // 3. Setting Spray //
+                    products.find(p => p.name === "Cover FX Illuminating Setting Spray"), 
+                    // 4. Powder //
+                    products.find(p => p.name === "Laura Mercier Loose Setting Powder"), 
+                    // 5. Contour //
+                    products.find(p => p.name === "Nars Bronzing Powder"), 
+                    // 6. Highlighter //
+                    products.find(p => p.name === "DOSE of Colors DESI X KATY MÍRAME Highlighter"), 
+                    // 7. Blush //
+                    products.find(p => p.name === "Laura Geller Baked Blush-N-Brighten"), 
+                    // 8. Mascara //
+                    products.find(p => p.name === "Too Faced Better Than Sex Mascara"), 
+                    // 9. Eyeliner //
+                    products.find(p => p.name === "Inglot AMC Eyeliner Gel"), 
+                    // 10. Lipstick //
+                    products.find(p => p.name === "Maybelline Superstay Matte Ink Liquid Lipstick"), 
+                    // 11. Brow //
+                    products.find(p => p.name === "Benefit Ka-BROW! Eyebrow Cream-Gel Color"), 
+                    // 12. Eyeshadow //
+                    products.find(p => p.name === "DOSE of Colors Baked Browns") 
                 ]
             }
             // {
