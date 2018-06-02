@@ -22,6 +22,10 @@ Create your own account or use:
 email: user@user
 password: password
 to get started
+| Email      | Password     |
+| ------------- |:-------------:|
+| user@user   | password |
+
 [Fire Beauty on Heroku](https://fire-beauty.herokuapp.com/)
 
 # Next Steps
