@@ -22,7 +22,7 @@ class FollowedPage extends Component {
         let categoryFavorite = null;
 
         //if there is a user AND the first followed has a name//
-        if (this.props.user && this.props.user.followed[0].name) {
+        if (this.props.user && this.props.user.followed.length && this.props.user.followed[0].name) {
             categoryFavorite = this.props.user.followed.map((userFollowed, idx) =>
                 <div key={idx}>
                     <InfluencerCard
