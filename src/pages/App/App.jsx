@@ -13,6 +13,7 @@ import SignupPage from '../SignupPage/SignupPage';
 import userService from '../../utils/userService';
 import tokenService from '../../utils/tokenService';
 import NavBar from '../../components/NavBar/NavBar';
+import Footer from '../../components/Footer/Footer';
 
 class App extends Component {
     constructor(props) {
@@ -103,6 +104,7 @@ class App extends Component {
                                 />
                             } />
                         </Switch>
+                        <Footer/>
                     </div>
                 </Router>
             </div>

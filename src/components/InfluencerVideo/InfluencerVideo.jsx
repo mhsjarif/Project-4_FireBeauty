@@ -7,16 +7,15 @@ const InfluencerVideo = (props) => {
         height: '390',
         width: '640',
         playerVars: {
-            autoplay: 1
+            autoplay: -1
         }
     };
 
     return (
-        <div>
+        <div className="youtube-video">
             <YouTube
                 videoId={props.videoUrl}
                 opts={opts}
-            // onReady={this._onReady}
           />
         </div>
     )
