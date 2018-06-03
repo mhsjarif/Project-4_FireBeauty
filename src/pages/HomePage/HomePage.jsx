@@ -38,7 +38,7 @@ class HomePage extends Component {
 
         return (
             <div>
-                <div className="influencers-header">
+                <div className="fire-header">
                     <img src="https://i.imgur.com/Zq60YVW.png" alt="fire"/>
                         &nbsp;Fire Beauty Influencers&nbsp;
                     <img src="https://i.imgur.com/Zq60YVW.png" alt="fire"/>

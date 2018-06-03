@@ -17,12 +17,14 @@
 }
 
 .favorite-card {
-    position: relative;    
+    position: relative;
     align-items: center;
     padding: 10px;
     width: 500px;
     height: 205px;
     margin: 10px;
+    background-color: #ffffffa3;
+    border-radius: 120px;
 }
 
 .favorite-card img {

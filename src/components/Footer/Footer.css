@@ -2,6 +2,7 @@ footer {
     text-align: center;
     height: 80px;
     background-color: rgba(240, 128, 128, 0.598);
+    margin-top: 15%
 }
 
 .dev-links img {

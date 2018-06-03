@@ -47,6 +47,12 @@
 .login, .signup, .home-link, .followed-link, .logout {
     height: 100%;
     text-align: center;
+    display: table;
+}
+
+.login a, .signup a, .home-link a, .followed-link a, .logout a {
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .login:hover, .signup:hover, .home-link:hover, .followed-link:hover, .logout:hover {
