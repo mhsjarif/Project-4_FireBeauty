@@ -1,14 +1,15 @@
 .fav-button {
-    background-color: darkred; 
-    color: white; 
-    border: 2px solid darkred;
+    background-color: #ffe8e8;
+    color: #894746;
+    border: 1px solid #ffbcbc;
     border-radius: 3px;
     height: 50px;
     width: 100%;
     font-size: 30px;
+    font-family: 'Nothing You Could Do', cursive;
 }
 
 .fav-button:hover {
-    background-color: white;
-    color: darkred;
+    background-color: lightcoral;
+    color: #ffe8e8;
 }

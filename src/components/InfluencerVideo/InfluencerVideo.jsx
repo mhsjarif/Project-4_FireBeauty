@@ -4,18 +4,19 @@ import './InfluencerVideo.css';
 
 const InfluencerVideo = (props) => {
     const opts = {
-        height: '390',
-        width: '640',
+        height: '350',
+        width: '600',
         playerVars: {
-            autoplay: -1
+            autoplay: 1
         }
     };
 
     return (
-        <div className="youtube-video">
+        <div>
             <YouTube
                 videoId={props.videoUrl}
                 opts={opts}
+                className={"youtube-video"}
           />
         </div>
     )

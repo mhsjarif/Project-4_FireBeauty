@@ -5,6 +5,7 @@
 }
 
 .custom-select select {
+    font-family: 'Amatic SC', cursive;
     width: 50%;
     height: 75px;
     border: 1px solid brown;
@@ -14,10 +15,6 @@
     margin-top: 5%;
     background-color: #ffe8e8;
     outline: none;
-}
-
-.custom-select select option {
-    background-color: purple;
 }
 
 .followed-wrapper {
