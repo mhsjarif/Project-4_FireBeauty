@@ -7,6 +7,7 @@ router.post('/signup', usersCtrl.signup);
 router.post('/login', usersCtrl.login);
 router.get('/followInfluencer/:id', usersCtrl.followInfluencer);
 router.get('/followed', usersCtrl.getFollowed);
+router.delete('/unfollowInfluencer/:id', usersCtrl.unfollowInfluencer);
 
 
 

@@ -49,6 +49,22 @@ class App extends Component {
         });
     }
 
+    handleUnfollow = (influencer) => {
+        fetch(`/api/users/unfollowInfluencer/${influencer}`, {
+            method: 'delete',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + tokenService.getToken()
+            }
+        })
+        .then(res => res.json())
+        .then(user => {
+            this.setState({user})
+        });
+    }
+
+    
+
     getFollowed = () => {
         return fetch('/api/users/followed', {
             headers: {
@@ -81,6 +97,7 @@ class App extends Component {
                                 <InfluencerPage
                                     {...props}
                                     handleFollow={this.handleFollow}
+                                    handleUnfollow={this.handleUnfollow}
                                     user={this.state.user}
                                 />
                             } />

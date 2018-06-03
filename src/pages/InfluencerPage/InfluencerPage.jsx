@@ -73,7 +73,7 @@ class InfluencerPage extends Component {
                                     // IF THEY ARE FOLLOWED
                                     <FavoriteButton
                                         influencer={this.state.influencer}
-                                        click={this.props.handleFollow}
+                                        click={this.props.handleUnfollow}
                                         heart="Unfollow"
                                     />
                                     :

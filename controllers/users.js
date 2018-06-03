@@ -34,6 +34,16 @@ function followInfluencer(req, res) {
   })
 }
 
+function unfollowInfluencer(req, res) {
+  User.findOne({_id: req.user._id}, function(err, user) {
+    user.followed = user.followed.filter(e => e != req.params.id)
+    user.save((err, user) => res.json(user));
+  })
+  // // console.log(req.params.id);
+  // req.user.followed.filter((elem) => elem !== req.params.id);
+  // req.user.save((err, user) => console.log(res.json(user)));
+}
+
 function getFollowed(req, res) {
   User.findById(req.user._id).populate({
       path: 'followed',
@@ -59,5 +69,6 @@ module.exports = {
   signup,
   login,
   followInfluencer,
+  unfollowInfluencer,
   getFollowed
 };
