@@ -2,3 +2,19 @@
     width: 560px;
     height: 315px;
 } */
+
+.channel-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+}
+
+.social-media img {
+    margin: 0px 6%;
+    width: 20%;
+}
+
+.sub-count {
+    font-family: 'Nothing You Could Do', cursive;
+    font-size: 110%;
+    letter-spacing: 4px;
+}

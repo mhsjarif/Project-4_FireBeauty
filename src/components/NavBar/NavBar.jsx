@@ -12,27 +12,29 @@ const NavBar = (props) => (
                 <div className="logo">
                     <Link to='/'><img src='https://i.imgur.com/JCOOFsB.png?1' alt="Fire Beauty Logo"/></Link>
                 </div>
-                <div className="home-link">
+                <div className="nav-item">
                     <Link to='/'>&nbsp;&nbsp;Home&nbsp;&nbsp;</Link>
                 </div>
-                <div className="followed-link">
+                <div className="nav-item">
                     <Link to='/followed'>&nbsp;&nbsp;Followed&nbsp;&nbsp;</Link>
                 </div>
-                <div className="logout"onClick={props.handleLogout}>&nbsp;&nbsp;Log Out&nbsp;&nbsp;</div>
+                <div className="nav-item"onClick={props.handleLogout}>
+                    <div className="logout">&nbsp;&nbsp;Log Out&nbsp;&nbsp;</div>
+                </div>
             </div>
             : 
             <div className="nav-bar">
                 <div className="logo">
                     <Link to='/'><img src='https://i.imgur.com/JCOOFsB.png?1' alt="Fire Beauty Logo"/></Link>
                 </div>
-                <div className="home-link">
+                <div className="nav-item">
                     <Link to='/'>&nbsp;&nbsp;Home&nbsp;&nbsp;</Link>
                 </div>
                 {/* <Link className="nav-item" to='/followed'>Followed</Link> */}
-                <div className="login">
+                <div className="nav-item">
                     <Link className="nav-item" to='/login'>&nbsp;&nbsp;Log In&nbsp;&nbsp;</Link>
                 </div>
-                <div className="signup">
+                <div className="nav-item">
                     <Link className="nav-item" to='/signup'>&nbsp;&nbsp;Sign Up&nbsp;&nbsp;</Link>
                 </div>
             </div>
