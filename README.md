@@ -20,11 +20,10 @@ fire beauty is a blah blah blah blalahhh
 # Getting Started
 Create your own account or use the provided account to get started:
 
-Fire Beauty Demo Account|
+Fire Beauty Demo Account | 
 --- | --- |
-email | *user@user* |
---- | --- |
-password | *password* |
+email: *user@user* | 
+password: *password* | 
 
 
 [Fire Beauty on Heroku](https://fire-beauty.herokuapp.com/)
