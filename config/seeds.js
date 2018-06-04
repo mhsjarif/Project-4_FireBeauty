@@ -55,6 +55,13 @@ seed
             link: 'https://www.giorgioarmanibeauty-usa.com/makeup/foundation/liquid-foundation/luminous-silk-foundation/A041.html'
         },
         {
+            category: "Foundation",
+            name: "Fenty Beauty Pro Filt'r Soft Matte Longwear Foundation",
+            price: 34.00,
+            img: `${IMG_URL}m59S7o9.png`,
+            link: 'https://www.fentybeauty.com/pro-filtr/soft-matte-longwear-foundation/FB30006.html'
+        },
+        {
             category: "Concealer",
             name: "Becca Aqua Luminous Perfecting Concealer",
             price: 32.00,
@@ -95,6 +102,13 @@ seed
             price: 27.00,
             img: `${IMG_URL}Mqcl09d.png`,
             link: 'https://tartecosmetics.com/en_US/makeup/face/concealer/shape-tape-contour-concealer/836.html'
+        },
+        {
+            category: "Concealer",
+            name: "ColourPop No Filter Concealer",
+            price: 6.00,
+            img: `${IMG_URL}Q8IWQMv.png`,
+            link: 'https://colourpop.com/products/no-filter-concealer'
         },
         {
             category: "Setting Spray",
@@ -174,6 +188,13 @@ seed
             link: 'https://www.yslbeautyus.com/makeup/face-makeup/face-powder/souffle-declat-sheer-and-radiant-face-powder/1054YSL.html'
         },
         {
+            category: "Powder",
+            name: "Makeup Revolution Luxury Banana Powder",
+            price: 8.00,
+            img: `${IMG_URL}vDVzgX6.png`,
+            link: 'https://www.revolutionbeautyusa.com/en/us/Luxury-Banana-Powder/m-2469.aspx'
+        },
+        {
             category: "Contour",
             name: "Chanel Soleil Tan De Chanel Bronzing Makeup Base",
             price: 50.00,
@@ -207,6 +228,13 @@ seed
             price: 40.00,
             img: `${IMG_URL}AJkpDWQ.png`,
             link: 'https://www.narscosmetics.com/USA/casino-bronzing-powder/0607845051022.html'
+        },
+        {
+            category: "Contour",
+            name: "Chanel Healthy Glow Sheer Colour",
+            price: 58.00,
+            img: `${IMG_URL}NfySS5r.png`,
+            link: 'https://www.chanel.com/us/makeup/p/186476/les-beiges-healthy-glow-sheer-colour-spf-15/'
         },
         {
             category: "Highlighter",
@@ -251,6 +279,13 @@ seed
             link: 'https://www.ofracosmetics.com/products/glazed-donut-highlighter'
         },
         {
+            category: "Highlighter",
+            name: "Laura Geller Baked Gellato Swirl Illuminator",
+            price: 26.00,
+            img: `${IMG_URL}HjJPcQg.png`,
+            link: 'https://www.laurageller.com/baked-gelato-swirl-illuminator.html'
+        },
+        {
             category: "Blush",
             name: "L'Oreal True Match Super Blendable Blush",
             price: 10.95,
@@ -291,6 +326,13 @@ seed
             price: 28.00,
             img: `${IMG_URL}rY92aWR.png`,
             link: 'https://www.laurageller.com/baked-blush-n-brighten.html'
+        },
+        {
+            category: "Blush",
+            name: "Milk Makeup Lip + Cheek",
+            price: 24.00,
+            img: `${IMG_URL}AE7GTIr.png?1`,
+            link: 'https://www.milkmakeup.com/lip-cheek.html'
         },
         {
             category: "Eyeliner",
@@ -391,6 +433,13 @@ seed
             link: 'https://www.maybelline.com/lip-makeup/lipstick/superstay-matte-ink-liquid-lipstick'
         },
         {
+            category: "Lipstick",
+            name: "Fenty Beauty Stunna Lip Paint",
+            price: 24.00,
+            img: `${IMG_URL}7bcuOB9.png`,
+            link: 'https://www.fentybeauty.com/stunna-lip-paint/longwear-fluid-lip-color/22360.html'
+        },
+        {
             category: "Mascara",
             name: "L'Oreal Voluminous Lash Paradise Mascara",
             price: 9.99,
@@ -466,6 +515,13 @@ seed
             price: 35.00,
             img: `${IMG_URL}t0QyUhX.png`,
             link: 'https://www.iconiclondoninc.com/products/eyebrow-cushion-sculpt-boost?variant=378209304585'
+        },
+        {
+            category: "Brow",
+            name: "Ecobrow",
+            price: 26.00,
+            img: `${IMG_URL}Y4IElg8.png?1`,
+            link: 'https://ecobrow.com/store/rita/'
         },
         {
             category: "Eyeshadow",
@@ -749,6 +805,39 @@ seed
                     products.find(p => p.name === "Benefit Ka-BROW! Eyebrow Cream-Gel Color"), 
                     // 12. Eyeshadow //
                     products.find(p => p.name === "DOSE of Colors Baked Browns") 
+                ]
+            },
+            {
+                name: 'Alissa Ashley', 
+                youtube_id: 'UCd4W_zVD74QqP55uAEN9REQ', 
+                video_url: "mKpW_rj0tuI", 
+                instagram: 'https://www.instagram.com/alissa.ashley/',
+                twitter: 'https://twitter.com/alissa_ashleyy',
+                favorites:[
+                    // 1. Foundation // 
+                    products.find(p => p.name === "Fenty Beauty Pro Filt'r Soft Matte Longwear Foundation"), 
+                    // 2. Concealer //
+                    products.find(p => p.name === "ColourPop No Filter Concealer"), 
+                    // 3. Setting Spray //
+                    products.find(p => p.name === "Morphe Prep & Set Makeup Setting Spray"), 
+                    // 4. Powder //
+                    products.find(p => p.name === "Makeup Revolution Luxury Banana Powder"), 
+                    // 5. Contour //
+                    products.find(p => p.name === "Chanel Healthy Glow Sheer Colour"), 
+                    // 6. Highlighter //
+                    products.find(p => p.name === "Laura Geller Baked Gellato Swirl Illuminator"), 
+                    // 7. Blush //
+                    products.find(p => p.name === "Milk Makeup Lip + Cheek"), 
+                    // 8. Mascara //
+                    products.find(p => p.name === "Benefit Cosmetics BADgal Bang! Mascara"), 
+                    // 9. Eyeliner //
+                    products.find(p => p.name === "Inglot AMC Eyeliner Gel"), 
+                    // 10. Lipstick //
+                    products.find(p => p.name === "Fenty Beauty Stunna Lip Paint"), 
+                    // 11. Brow //
+                    products.find(p => p.name === "Ecobrow"), 
+                    // 12. Eyeshadow //
+                    products.find(p => p.name === "Morphe The Jaclyn Hill Palette") 
                 ]
             }
             // {
