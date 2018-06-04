@@ -12,6 +12,9 @@ const NavBar = (props) => (
                 <div className="logo">
                     <Link to='/'><img src='https://i.imgur.com/JCOOFsB.png?1' alt="Fire Beauty Logo"/></Link>
                 </div>
+                <div>
+                    <div className="welcome">&nbsp;&nbsp;Welcome, {props.user.name}.&nbsp;&nbsp;</div>
+                </div>
                 <div className="nav-item">
                     <Link to='/'>&nbsp;&nbsp;Home&nbsp;&nbsp;</Link>
                 </div>
@@ -30,7 +33,6 @@ const NavBar = (props) => (
                 <div className="nav-item">
                     <Link to='/'>&nbsp;&nbsp;Home&nbsp;&nbsp;</Link>
                 </div>
-                {/* <Link className="nav-item" to='/followed'>Followed</Link> */}
                 <div className="nav-item">
                     <Link className="nav-item" to='/login'>&nbsp;&nbsp;Log In&nbsp;&nbsp;</Link>
                 </div>

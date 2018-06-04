@@ -20,12 +20,9 @@ userSchema.set('toJSON', {
 });
 
 userSchema.pre('save', function(next) {
-    // this = current doc
     var user = this;
     if (!user.isModified('password')) return next();
-    // salt and hash the password if its changed
     bcrypt.hash(user.password, SALT_ROUNDS, function(err, hash) {
-        // replace password with the hash(salty pass)
         user.password = hash;
         next();
     });

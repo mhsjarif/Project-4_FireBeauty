@@ -46,16 +46,16 @@
     font-size: 85%;
 }
 
-.nav-item a, .logout {
+.nav-item a, .logout , .welcome {
     display: table-cell;
     vertical-align: middle;
+}
+
+.welcome {
+    font-size: 70%;
 }
 
 .nav-item:hover {
     cursor: pointer;
     background-color: #ffe8e8;
 }
-
-/* .login, .signup {
-    width: 10%;
-} */

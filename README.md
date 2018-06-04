@@ -2,8 +2,9 @@
 
 Fire Beauty is a custom built beauty product database showcasing top beauty influencer “favorites”. Our data is a nice blend of channel information from YouTube’s data API and our own Fire Beauty database. Fire Beauty allows users to follow and discover top beauty influencers and their favorite products.
 
-<!-- ![is it fun? 1](https://i.imgur.com/ppLvH40.png)
-![is it fun? 2](https://i.imgur.com/GIGeBjP.png) -->
+![firebeauty 1](https://i.imgur.com/dR0Hdbo.png)
+![firebeauty 2](https://i.imgur.com/Y3u9piJ.png)
+![firebeauty 3](https://i.imgur.com/aJEAoKU.png)
 
 # Technologies Used
 * React

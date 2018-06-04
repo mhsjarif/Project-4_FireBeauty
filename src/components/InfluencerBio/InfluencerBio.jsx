@@ -1,5 +1,4 @@
 import React from 'react';
-// import {Link} from 'react-router-dom'
 import './InfluencerBio.css';
 
 const InfluencerBio = (props) => {
@@ -25,9 +24,6 @@ const InfluencerBio = (props) => {
                 <img src="https://i.imgur.com/dqAP8Yp.png" alt="insta logo"/>
             </a>
         </div>
-
-        
-        {/* <object className="video" data={props.influencer.video_url} /> */}
     </div>
 )
 }

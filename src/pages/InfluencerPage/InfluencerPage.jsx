@@ -22,7 +22,6 @@ class InfluencerPage extends Component {
                     influencer: influencer[0],
                     videoUrl: influencer[0].video_url
                 })
-                console.log(this.state.videoUrl)
             });
     }
 
@@ -70,14 +69,12 @@ class InfluencerPage extends Component {
                             />
                             {this.props.user ?
                                 this.props.user.followed.includes(this.state.influencer._id) || this.props.user.followed.some(f => f._id === this.state.influencer._id) ?
-                                    // IF THEY ARE FOLLOWED
                                     <FavoriteButton
                                         influencer={this.state.influencer}
                                         click={this.props.handleUnfollow}
                                         heart="Unfollow"
                                     />
                                     :
-                                    // IF THEY ARE NOT FOLLOWED
                                     <FavoriteButton
                                         influencer={this.state.influencer}
                                         click={this.props.handleFollow}

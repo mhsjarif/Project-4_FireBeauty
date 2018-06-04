@@ -24,14 +24,4 @@ const Favorites = (props) => {
         </div>
     )
 }
-
-{/* <div className="card-container">
-                <Link to={`/influencer/${this.props.influencer._id}`}>
-                <div className="card-image"><img src={this.state.imageUrl}  alt="Influencer"/></div>
-                <div className="card-overlay">
-                    <div className="overlay-text">{this.state.channelName}</div>
-                </div>
-                </Link>
-            </div> */}
-
 export default Favorites;

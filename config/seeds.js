@@ -1,5 +1,4 @@
 require('dotenv').config({path: './../.env'});
-console.log(process.env)
 require('./database');
 
 const Influencer = require('./../models/influencer');

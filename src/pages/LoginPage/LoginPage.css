@@ -35,6 +35,7 @@
     font-size: 100%;
     border-radius: 5px;
     border: 1px solid lightcoral;
+    outline: none;
   }
 
   .input-button {

@@ -39,9 +39,6 @@ function unfollowInfluencer(req, res) {
     user.followed = user.followed.filter(e => e != req.params.id)
     user.save((err, user) => res.json(user));
   })
-  // // console.log(req.params.id);
-  // req.user.followed.filter((elem) => elem !== req.params.id);
-  // req.user.save((err, user) => console.log(res.json(user)));
 }
 
 function getFollowed(req, res) {
